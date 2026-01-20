@@ -8,11 +8,11 @@ We have seen five problems with the American UPS in the last three months.
 These happen *exactly* two weeks apart. 
 The pattern is the same:
 
-- At about 08:10 the UPS changes from line to battery
-- At about 08:25 it reaches 90% charge and closes the telescope
-- At about 08:40 it starts charging again
-- At about 10:10 it reaches 96% and the telescope can open again
-- At about 11:20 it reaches 100% charge
+- At about 08:10 UTC the UPS changes from line to battery
+- At about 08:25 UTC it reaches 90% charge and closes the telescope
+- At about 08:40 UTC it starts charging again
+- At about 10:10 UTC it reaches 96% and the telescope can open again
+- At about 11:20 UTC it reaches 100% charge
 
 When this happens, we lose almost two hours of observation.
 
@@ -35,7 +35,7 @@ This would reduce the closures from almost two hours to about 15 minutes in the 
 
 ## European UPS
 
-Almost every night at 08:00, the European UPS switches to battery, discharges to
+Almost every night at 08:00 UTC, the European UPS switches to battery, discharges to
 98% in about 20 seconds, and then charges back to 100% over the course of the
 next half hour.
 
