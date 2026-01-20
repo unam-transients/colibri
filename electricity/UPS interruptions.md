@@ -4,7 +4,9 @@
 
 ## American UPS
 
-We have seen five problems with the American UPS in the last three months. The pattern is the same:
+We have seen five problems with the American UPS in the last three months. 
+These happen *exactly* two weeks apart. 
+The pattern is the same:
 
 - At about 08:10 the UPS changes from line to battery
 - At about 08:25 it reaches 90% charge and closes the telescope
