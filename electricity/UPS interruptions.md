@@ -4,8 +4,8 @@
 
 ## American UPS
 
-We have seen five problems with the American UPS in the last three months. 
-These happen *exactly* two weeks apart. 
+We have seen five problems with the American UPS in the last three months.
+These happen *exactly* two weeks apart.
 The pattern is the same:
 
 - At about 08:10 UTC the UPS changes from line to battery
@@ -20,6 +20,11 @@ It's not clear to me why we discharge to 90% and then stop. The major loads on
 the European UPS are the compressors, the computers, and the dome. Perhaps the
 dome dominates the load?
 
+I talked to Edgar.
+He confirmed that the UPS is configured to do a self-test at 00:00 local time = 08:00 UTC every second Tuesday.
+This explains these interruptions.
+He has configured the tests to be every fourth Tuesday at 11:00 local time = 19:00 UTC.
+
 The current algorithm for the UPS alarm is:
 
 - set the alarm when the battery reaches 90%
@@ -31,7 +36,6 @@ I would propose changing this to:
 - clear the alarm when the battery recharges to 91%
 
 This would reduce the closures from almost two hours to about 15 minutes in the cases we have seen.
-
 
 ## European UPS
 
