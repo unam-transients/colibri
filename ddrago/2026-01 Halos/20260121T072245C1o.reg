@@ -1,0 +1,12 @@
+image
+global color=red width=2 font="verdana 18 normal roman"
+box 2217 2828 128 128 # text={A}
+box 3090 2105 128 128 # text={B}
+box 2098  410 128 128 # text={C}
+box  592 1695 128 128 # text={D}
+box  393 3325 128 128 # text={E}
+box  892 4029 128 128 # text={F}
+box 1436 3512 128 128 # text={G}
+box 3560 3574 128 128 # text={H}
+
+circle 2217 2828 34 # width=1 color=green

@@ -1,0 +1,89 @@
+%!LW recipe=latexmk (xelatex)
+%!TEX program = xelatex
+
+\documentclass{article}
+
+\input{style.tex}
+
+\title{\Large\bfseries Halos in DDRAGO Images}
+
+\author{
+    Alan M.\ Watson \& Jorge Fuentes-Fernández
+    \\[\medskipamount]
+    \itshape Instituto de Astronomía\\
+    \itshape Universidad Nacional Autónoma de México
+}
+
+\date{22 January 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    \noindent
+    We see halos around bright stars in DDRAGO images in the $g$, $gri$, and $B$ fitlers. We believe these are caused by an internal reflection in the window of the detector.
+\end{abstract}
+
+\section{Observations}
+
+DDRAGO images in the $g$, $gri$, and $B$ fitlers show halos around bright stars. Examples are shown in Figure~\ref{figure:example-g-full},  \ref{figure:example-gri-full}, and \ref{figure:example-B-full}. Figure~\ref{figure:example-g-zooms} shows zooms on the halos in Figure~\ref{figure:example-g-full}. These halos are not seen in other filters.
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{figures/20260121T072245C1o.png}
+    \caption{An image in $g$ (20260121T072245C1o) showing haloes around bright stars.}
+    \label{figure:example-g-full}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{figures/20260117T055354C1o.png}
+    \caption{An image in $gri$ (20260121T072245C1o) showing haloes around bright stars.}
+    \label{figure:example-gri-full}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=\linewidth]{figures/20260117T055505C1o.png}
+    \caption{An image in $B$ (20260117T055505C1o) showing haloes around bright stars.}
+    \label{figure:example-B-full}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-A.png}
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-E.png}
+
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-B.png}
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-F.png}
+
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-C.png}
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-G.png}
+
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-D.png}
+    \includegraphics[width=0.33\linewidth]{figures/20260121T072245C1o-H.png}
+
+    \caption{Zooms on bright stars in an image in $g$ (20260121T072245C1o) showing haloes.}
+    \label{figure:example-g-zooms}
+\end{figure}
+
+The halos are about 34 pixels or 510~{\micron} in radius at the center of the field.
+
+At the position of star A in Figure~\ref{figure:example-g-full}, the halos are approximately centered on the star. Towards the edge of the field, the centers of the halos are displaced away from the field center with respect to the star.
+
+TODO: Estimate the energy in the halo in $g$ and $B$.
+
+\section{Analysis}
+
+We suspect that the haloes might be from internal reflection in the detector window. This has an optical thickness of 3.2~mm, a physical thickness of 2.2 mm, and is fabricated from fused silica with (“Optical Validation of the DDRAGO CCD,” Fuentes-Fernández \& Cuevas, 2019).
+
+The DDRAGO optics deliver an $f/6.3$ beam to the blue CCD, corresponding to a numerical aperture $N=1/6.3$. A single internal reflection in the detector window will form a ghost image a distance $2T$ before the focal plane, in which $T=3.2$~mm is the optical thickness of the window. The radius of this image in the focal plane will be $TN/2 \approx 476$~{\micron}. This is a good match to the measured radius of about 510~{\micron}.
+
+\section{Window Coating}
+
+We do not have measurements of the transmission of the window of the blue CCD. It is specified by Spectral Instruments as having $\le 1\%$ reflectivity per surface between 400 and 800~nm. Within this spectral range we expect any halos to be at the level of $10^{-4}$ or less in total light. For a star saturated in four pixels, we expect the level to be around 0.007 DN/pixel. The halos we see are very much brighter than this.
+
+TODO: Estimate the coating reflectivity in $g$.
+
+%The $B$ filter has a 50\% transmission point at about 380 nm (“Validation of the DDRAGO Filters,” Fuentes-Fernández \& Cuevas, 2019) and so extends down into a region where the reflectivity of the window is not specified. In this case, it is not surprising to see these halos. 
+
+%The $g$ and $gri$ filters have 50\% transmission points at 397 and 399~nm, respectively, and so formally extend down 
+
+\end{document}

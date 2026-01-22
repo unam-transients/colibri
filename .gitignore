@@ -1,5 +1,6 @@
 .vscode/settings.json
-weather-station/humidity-calibration/report.aux
-weather-station/humidity-calibration/report.log
-weather-station/humidity-calibration/report.synctex.gz
 .DS_Store
+*.aux
+*.log
+*.synctex.gz
+*.out
