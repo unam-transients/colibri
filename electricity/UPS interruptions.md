@@ -8,7 +8,8 @@ I talked to Edgar. He confirmed that the UPS is configured to do a self-test at
 00:00 local time = 08:00 UTC every second Tuesday. This explains these
 interruptions.
 
-He has configured the tests to be every fourth Tuesday at 11:00 local time = 19:00 UTC.
+He has configured the tests to be every fourth Tuesday at 11:00 local time =
+19:00 UTC.
 
 When we discussed this, Stéphane asked why we did not see this before September.
 I only programmed reporting of the battery levels in September 2025. Before that
@@ -49,7 +50,8 @@ I would propose changing this to:
 - set the alarm when the battery reaches 90%
 - clear the alarm when the battery recharges to 91%
 
-This would reduce the closures from almost two hours to about 15 minutes in the cases we have seen.
+This would reduce the closures from almost two hours to about 15 minutes in the
+cases we have seen.
 
 ## European UPS
 
@@ -65,15 +67,15 @@ during the day.
 
 ### 2026-01-20
 
-Almost every night at 08:00 UTC, the European UPS switches to battery, discharges to
-98% in about 20 seconds, and then charges back to 100% over the course of the
-next half hour.
+Almost every night at 08:00 UTC, the European UPS switches to battery,
+discharges to 98% in about 20 seconds, and then charges back to 100% over the
+course of the next half hour.
 
 This seems to happen whether the telescope is open or not.
 
 ## Appendix: Discharge Events for the American UPS
 
-```
+```text
 2025-11-11 08:10:01.957 plcserver: summary: american ups battery charge level has changed from 100% to 99%.
 2025-11-11 08:25:43.828 plcserver: summary: american ups battery charge level has changed from 91% to 90%.
 2025-11-11 08:36:42.209 plcserver: summary: american ups battery charge level has changed from 90% to 91%.
@@ -113,7 +115,7 @@ This seems to happen whether the telescope is open or not.
 
 ## Appendix: Discharge Events for the European UPS
 
-```
+```text
 2025-10-29 08:00:11.930 plcserver: summary: european ups battery level has changed from 100% to 99%.
 2025-10-29 08:00:17.128 plcserver: summary: european ups battery level has changed from 99% to 98%.
 2025-10-29 08:02:03.273 plcserver: summary: european ups battery level has changed from 98% to 99%.
