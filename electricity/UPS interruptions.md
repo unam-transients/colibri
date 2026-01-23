@@ -1,8 +1,27 @@
-# UPS Problems
-
-2026-01-20 Alan Watson
+# UPS Interruptions
 
 ## American UPS
+
+### 2026-01-21
+
+I talked to Edgar. He confirmed that the UPS is configured to do a self-test at
+00:00 local time = 08:00 UTC every second Tuesday. This explains these
+interruptions.
+
+He has configured the tests to be every fourth Tuesday at 11:00 local time = 19:00 UTC.
+
+When we discussed this, Stéphane asked why we did not see this before September.
+I only programmed reporting of the battery levels in September 2025. Before that
+I just logged alarms. However, there were UPS alarms just after 08:00 UTC on:
+
+> 2025-02-18, 2025-03-04, 2025-03-18, 2025-04-01, 2025-04-15, 2025-04-29,
+> 2025-05-13, 2025-05-27, 2025-06-10, 2025-06-24, 2025-07-08, 2025-07-22,
+> 2025-08-05, 2025-08-19, 2025-09-02, 2025-09-16, 2025-10-14, 2025-10-28,
+> 2025-11-11, 2025-11-25, 2025-12-09, and 2025-12-23.
+
+These are every two weeks.
+
+### 2026-01-20
 
 We have seen five problems with the American UPS in the last three months.
 These happen *exactly* two weeks apart.
@@ -20,11 +39,6 @@ It's not clear to me why we discharge to 90% and then stop. The major loads on
 the European UPS are the compressors, the computers, and the dome. Perhaps the
 dome dominates the load?
 
-I talked to Edgar.
-He confirmed that the UPS is configured to do a self-test at 00:00 local time = 08:00 UTC every second Tuesday.
-This explains these interruptions.
-He has configured the tests to be every fourth Tuesday at 11:00 local time = 19:00 UTC.
-
 The current algorithm for the UPS alarm is:
 
 - set the alarm when the battery reaches 90%
@@ -38,6 +52,18 @@ I would propose changing this to:
 This would reduce the closures from almost two hours to about 15 minutes in the cases we have seen.
 
 ## European UPS
+
+### 2026-01-22
+
+Edgar programmed a self-test during the day. It showed exactly the same pattern
+as the interruptions in the night, which confirms that these are self-tests.
+
+The manual does not allow us to configure the times of these self tests. They
+automatically occur every 24 hours after the UPS is initialized. Edgar turned
+the UPS off and on at 12:00 PDT (20:00 UTC) in order that the self-tests occur
+during the day.
+
+### 2026-01-20
 
 Almost every night at 08:00 UTC, the European UPS switches to battery, discharges to
 98% in about 20 seconds, and then charges back to 100% over the course of the
@@ -83,7 +109,7 @@ This seems to happen whether the telescope is open or not.
 2026-01-20 08:40:38.019 plcserver: summary: american ups battery charge level has changed from 90% to 91%.
 2026-01-20 10:10:38.565 plcserver: summary: american ups battery charge level has changed from 95% to 96%.
 2026-01-20 11:22:38.335 plcserver: summary: american ups battery charge level has changed from 99% to 100%.
-````
+```
 
 ## Appendix: Discharge Events for the European UPS
 
