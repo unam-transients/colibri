@@ -2,6 +2,10 @@
 
 ## American UPS
 
+### 2026-01-27
+
+François changed the UPS alarm limits to set the alarm at 85% and clear it at 86%.
+
 ### 2026-01-21
 
 I talked to Edgar. He confirmed that the UPS is configured to do a self-test at
@@ -54,6 +58,13 @@ This would reduce the closures from almost two hours to about 15 minutes in the
 cases we have seen.
 
 ## European UPS
+
+### 2026-01-27
+
+François changed the UPS alarm limits to set the alarm at 85% and clear it at 86%.
+
+Alan notices that the apparent self-tests (discharge to 98%) are still occurring
+just after 08:00 UTC.
 
 ### 2026-01-22
 
